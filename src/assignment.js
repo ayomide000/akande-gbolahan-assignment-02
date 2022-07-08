@@ -1,6 +1,9 @@
-// ========================
+// ======================
 // DO NOT EDIT THIS BLOCK
 const assignment = {};
+// let arrayOfNumbers = [5, 10, 15, 20, 25, 30];
+
+
 // ========================
 
 
@@ -14,9 +17,17 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    let sum = 0;
+  
+    for(let i = 0; i < arrayOfNumbers.length; i++){
+      // console.log(arrayOfNumber[i])
+      sum  += arrayOfNumbers[i]
+      console.log(sum)
+    }
+    return sum;
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+console.log(sumOfNumbers([5, 10, 15, 20, 25, 30])) 
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
@@ -27,10 +38,31 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
+
+  
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+
+  let count = 0;
+
+  for (let index = 0; index < arrayOfNumbers.length; index++) {
+  
+    if (arrayOfNumbers[index] % 2 === 0){
+      console.log(arrayOfNumbers[index])
+        count++  
+     }
+    else{
+        console.log("not even")
+    }
+  }
+  
+      console.log(count)
+      return count
+ 
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+
+countEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3
@@ -47,9 +79,21 @@ function countEvenNumbers(arrayOfNumbers) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+  
+  const fahrenheit = arrayOfNumbers.map((celsius) => {
+    const convertFahrenheit = (celsius * 9 / 5) + 32;
+    console.log(convertFahrenheit) 
+
+    fahrenheitWholeNumber = Math.trunc(convertFahrenheit)
+    console.log(fahrenheitWholeNumber)
+
+    return fahrenheitWholeNumber
+    
+  })
+   return fahrenheit
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+celsiusToFahrenheit([5, 10, 15, 20, 25, 30])
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
